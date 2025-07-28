@@ -52,6 +52,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				protection: {
+					active: 'hsl(var(--protection-active))',
+					'active-foreground': 'hsl(var(--protection-active-foreground))',
+					inactive: 'hsl(var(--protection-inactive))',
+					badge: 'hsl(var(--protection-badge))'
+				},
+				'file-item': {
+					DEFAULT: 'hsl(var(--file-item))',
+					hover: 'hsl(var(--file-item-hover))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +77,14 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-protection': 'var(--gradient-protection)',
+				'gradient-background': 'var(--gradient-background)'
+			},
+			boxShadow: {
+				'protection': 'var(--shadow-protection)',
+				'elevated': 'var(--shadow-elevated)'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +102,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'shield-pulse': {
+					'0%, 100%': { 
+						transform: 'scale(1)',
+						filter: 'drop-shadow(0 0 0px hsl(var(--shield-glow)))'
+					},
+					'50%': { 
+						transform: 'scale(1.05)',
+						filter: 'drop-shadow(0 0 8px hsl(var(--shield-glow)))'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'shield-pulse': 'shield-pulse 2s ease-in-out infinite'
 			}
 		}
 	},
